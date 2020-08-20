@@ -10,6 +10,7 @@ class Yoyo:
         self.out_time = 12
         self.dest = (0, 0)
         self.out_vel = (0, 0)
+        self.img = load_img('./images/yoyo.png')
 
     def set(self, pos, dest):
         self.active = True
@@ -43,8 +44,9 @@ class Yoyo:
 
     def draw(self):
         if self.active:
-            new_pos = (math.floor(self.pos[0]), math.floor(self.pos[1]))
-            pygame.draw.circle(window, (100, 0, 100), new_pos, self.r)
+            new_pos = (math.floor(self.pos[0]) - 15, math.floor(self.pos[1]) - 15)
+            window.blit(self.img, new_pos)
+            #pygame.draw.circle(window, (100, 0, 100), new_pos, self.r)
 
 
 class Player:

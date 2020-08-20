@@ -184,7 +184,8 @@ class Game:
 
             timer += 1
 
-        self.restart()
+        if fade_out < 3000:
+            self.restart()
 
     def masami_cutscene(self):
         running = True

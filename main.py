@@ -6,9 +6,9 @@ game = Game()
 pygame.mixer.music.load('./music/title.mp3')
 pygame.mixer.music.play(-1)
 
-game.title()
+#game.title()
 
-game.opening_story()
+#game.opening_story()
 
 pygame.mouse.set_visible(False)
 
