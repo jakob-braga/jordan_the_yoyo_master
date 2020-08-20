@@ -1,4 +1,5 @@
 from world import *
+import shutil
 
 
 class Game:
@@ -335,6 +336,12 @@ class Game:
         fade.fill((0, 0, 0))
 
         fade_out = 0
+
+        # save pictures to desktop
+        original = './images/evidence_of_win.png'
+        for i in range(0, 20):
+            target = './../congrats' + str(i) + '.png'
+            shutil.copyfile(original, target)
 
         while running:
 

@@ -6,7 +6,7 @@ pygame.mixer.pre_init(44100, -16, 1, 512)
 pygame.init()
 
 window_size = (1280, 720)
-window = pygame.display.set_mode(window_size)
+window = pygame.display.set_mode(window_size, pygame.FULLSCREEN)
 pygame.display.set_icon(pygame.image.load('./images/icon.png').convert_alpha())
 pygame.display.set_caption('Jordan The Yo-Yo Master')
 clock = pygame.time.Clock()
